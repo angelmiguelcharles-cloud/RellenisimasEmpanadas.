@@ -1,0 +1,192 @@
+/* Imagen del encabezado */
+.logo {
+  width: 190px;
+  height: 190px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff8ec;
+  color: #2a1a14;
+  text-align: center;
+}
+
+/* Cada sección tiene un espacio adentro */
+section {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Encabezado rojo */
+header {
+  background-color: #c8202b;
+  color: white;
+  padding: 30px 20px;
+}
+
+.lema {
+  color: #ffd23f;
+  font-style: italic;
+  font-size: 24px;
+}
+
+/* Títulos de las secciones del pedido */
+.titulo-seccion {
+  color: #c8202b;
+  margin: 28px 0 16px;
+}
+
+/* Caja amarilla del combo */
+.combo {
+  background-color: #ffd23f;
+  color: #14285a;
+  border: 4px dashed #c8202b;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.precio {
+  font-size: 48px;
+  font-weight: bold;
+  color: #c8202b;
+}
+
+/* Cada empanada del menú */
+.empanada {
+  background-color: white;
+  border: 2px solid #c8202b;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+/* Pie de página */
+footer {
+  background-color: #c8202b;
+  color: white;
+  padding: 20px;
+}
+
+footer h2 {
+  color: #ffd23f;
+}
+
+/* Tarjetas de productos con esquinas recortadas */
+.item {
+  box-sizing: border-box;
+  margin: 10px auto;
+  background: rgba(236, 236, 8, 0.973);
+  --cut: 18px;
+  padding: 18px 22px;
+  clip-path: polygon(
+    var(--cut) 0,
+    calc(100% - var(--cut)) 0,
+    100% var(--cut),
+    100% calc(100% - var(--cut)),
+    calc(100% - var(--cut)) 100%,
+    var(--cut) 100%,
+    0 calc(100% - var(--cut)),
+    0 var(--cut)
+  );
+  width: min(100%, 550px);
+  min-height: 76px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.name {
+  flex: 1;
+  text-align: left;
+}
+
+.count {
+  min-width: 24px;
+}
+
+.btn-cantidad {
+  border: 0;
+  border-radius: 8px;
+  background-color: #c8202b;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+
+.btn-cantidad:hover {
+  background-color: #9f1720;
+}
+
+fieldset {
+  border: 2px solid #c8202b;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 15px;
+}
+
+fieldset label {
+  display: inline-block;
+  margin: 6px 12px;
+}
+
+.boton,
+.pedir {
+  display: inline-block;
+  padding: 18px 30px;
+  margin: 14px 6px;
+  border: 0;
+  background-color: orangered;
+  color: yellow;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.boton:hover,
+.pedir:hover {
+  background-color: #d93600;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+  .logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  section {
+    padding: 24px 14px;
+  }
+
+  .item {
+    padding: 14px;
+    font-size: 15px;
+    letter-spacing: .04em;
+  }
+
+  .boton,
+  .pedir {
+    padding: 16px 22px;
+  }
+
+  fieldset label {
+    display: block;
+  }
+}
